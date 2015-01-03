@@ -9,7 +9,7 @@ ADD			owncloud-mysql-7.0.4-2.fc21.noarch.rpm /tmp/
 ADD			owncloud-nginx-7.0.4-2.fc21.noarch.rpm  /tmp/
 ADD			php-google-apiclient-1.0.6-0.3.beta.fc21.noarch.rpm /tmp/
 RUN         yum -y update
-RUN         yum install -y /tmp/owncloud-7.0.4-2.fc21.noarch.rpm /tmp/owncloud-mysql-7.0.4-2.fc21.noarch.rpm /tmp/owncloud-nginx-7.0.4-2.fc21.noarch.rpm /tmp/php-google-apiclient-1.0.6-0.3.beta.fc21.noarch.rpm
+RUN         yum install -y cronie /tmp/owncloud-7.0.4-2.fc21.noarch.rpm /tmp/owncloud-mysql-7.0.4-2.fc21.noarch.rpm /tmp/owncloud-nginx-7.0.4-2.fc21.noarch.rpm /tmp/php-google-apiclient-1.0.6-0.3.beta.fc21.noarch.rpm
 RUN	    rm -rf /etc/owncloud 
 RUN	    ln -sf /owncloud /etc/owncloud 
 

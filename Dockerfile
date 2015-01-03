@@ -13,7 +13,7 @@ RUN         yum install -y cronie /tmp/owncloud-7.0.4-2.fc21.noarch.rpm /tmp/own
 RUN	    rm -rf /etc/owncloud 
 RUN	    ln -sf /owncloud /etc/owncloud 
 
-ADD         php.ini /etc/php-fpm.d/
+ADD         php.ini /etc/php-fpm.conf
 ADD         cron.conf /etc/oc-cron.conf
 RUN         crontab /etc/oc-cron.conf
 
